@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>lesson_8.1</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                Псевдоклассы
+            </h1>
+
+            <p class="about">С помощью псевдоклассов в CSS можно устанавливать стиль для уже существующих элементов
+                веб-страницы, который будет применяться в случае каких-то действий пользователя. Псевдоэлементы же
+                отличаются тем, что могут определять стиль несуществующего содержимого, а также четко не обозначенных
+                элементов.</p>
+        </header>
+        <main>
+            <div class="first">
+
+                <h2>псевдоклассы состояния</h2>
+                <h3>:hover</h3>
+                <p class="hover-text">определяет стиль элемента, когда на него наведен курсор (может применяться не
+                    только к ссылкам);</p>
+
+                <h3><a href="#exp" class="active">:active</a> </h3>
+                <p class="active-text">задает стиль активной ссылке (то есть, в момент клика по ней);</p>
+
+                <h3><a href="https://www.youtube.com/watch?v=AyQb6_iOUO8&t=2099s" target="_blank"
+                        class="visit">:visited</a></h3>
+                <p class="visited-text">применяет стиль к уже посещенным ссылкам;</p>
+
+                <h3>:focus</h3>
+                <p class="focus-text">применяет стиль к элементу при фокусировке на нем (например, при установке курсора
+                    в строку поиска);</p>
+                <a href="#" class="focus-button"> Я кнопка для примера </a>
+
+                <h3><a href="#for-experience" class="target">:target</a></h3>
+                <p class="target-text" id="for-experience">Срабатывает когда элемент является объектом на который
+                    ссылаются</p>
+            </div>
+            <div class="second">
+                <h2>Псевдоклассы положения в коде</h2>
+                <h3>:first child</h3>
+                <p class="first-child-text">Задает стиль( поведение ) первому дочернему элементу</p>
+                <h3>:first-of-type</h3>
+                <p class="first-of-type-text">Задает стиль первому определенному дочернему элементу</p>
+                <h3>:last child</h3>
+                <p class="last-child-text"> Все тоже самое но теперь последнему дочернему элементу </p>
+                <h3>:last-of-type-text</h3>
+                <p class="last-of-type-text"> задает стиль последнему определенному дочернему элементу</p>
+                <h3>:nth-child(...)</h3>
+                <p class="last-of-type-text"> задает стиль выбранному элементу</p>
+
+                <div class="for-example">
+                    <p class="example">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quasi veniam
+                        perspiciatis,
+                        cupiditate ducimus, culpa reiciendis fuga molestiae soluta accusantium, blanditiis error. Ullam
+                        exercitationem odio debitis libero iure necessitatibus amet!</p>
+                    <p class="example">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta voluptas
+                        nesciunt, rerum, sit,
+                        architecto neque minima dicta quia expedita tenetur iste qui harum omnis perspiciatis adipisci
+                        voluptatibus quaerat ducimus nemo.</p>
+                    <p class="example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro doloremque ut
+                        quod eligendi,
+                        tempora provident! Aliquid consectetur excepturi dicta consequatur fugit asperiores commodi
+                        voluptate iste vitae, praesentium magnam a natus.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h1 class="elements">Псевдоэлементы</h1>
+            <p class="about">Псевдоэлемент в CSS — это ключевое слово, добавляемое к селектору, которое позволяет
+                стилизовать
+                определённую часть выбранного элемента.</p>
+            <h3>::first-line</h3>
+            <p class="first-line-text">может быть использован для изменения шрифта первой строки абзаца.</p>
+            <h3>::first-letter</h3>
+            <p class="first-letter-text">применяет стили к первой букве первой строки блочного элемента, но только если
+                нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).</p>
+            <h3>::before</h3>
+            <p class="before-text">создаёт псевдоэлемент,который является первым потомком выбранного элемента. Часто
+                используется для добавления косметического содержимого в элемент с помощью свойства content. По
+                умолчания является инлайновым.</p>
+            <h3>::after</h3>
+            <p class="after-text"> создаёт псевдоэлемент, который является последним потомком выбранного элемента. Часто
+                используется для добавления косметического содержимого в элемент с помощью свойства content.</p>
+
+            <h3 class="postulate">Нерушимые постулаты</h3>
+            <div class="list">
+                <ul>
+                    <li>!::before и ::after строчные!</li>
+                    <li>!::before и ::after не работают без свойства content!</li>
+
+                </ul>
+            </div>
+            <h3>Ну уж очень охото было посмотреть.</h3>
+            <div class="lifehack">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consequatur facilis ullam animi,
+                    doloremque voluptatem ipsa voluptate perferendis eos reiciendis necessitatibus, fuga eligendi
+                    veritatis perspiciatis ut impedit aperiam dicta doloribus.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
